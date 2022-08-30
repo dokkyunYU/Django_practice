@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>greeting</title>
+</head>
+<body>
+  <h1> 안녕하세요 저는 {{ name }}입니다. </h1>
+  <p> 제이름의 길이는 {{ name|length }}입니다. </p>
+  {% comment %} <p> 푸드는 {{ food|join:" & " }}입니다. </p> {% endcomment %}
+  {% for food in foods %}
+    {% if food|length == 6 %}
+    <p> {{ forloop.counter }} {{ food }} </p>
+    {% endif %}
+  {% empty %}
+    <p> no!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! </p>
+  {% endfor %}
+
+  {# 이건 주석 #}
+  {% comment %}
+  여러줄 주석이야
+  {% endcomment %}
+</body>
+</html>

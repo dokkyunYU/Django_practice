@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1> Throw </h1>
+  <form action="/catch/" method="GET">
+    <label for="depart"> 소속 </label>
+    <input type="text" id="depart" name="depart">
+    <label for="name"> 이름 </label>
+    <input type="text" id="name" name="name">
+    <input type="submit">
+  </form>
+{% endblock %}
